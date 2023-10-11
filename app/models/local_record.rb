@@ -1,0 +1,2 @@
+class LocalRecord < ApplicationRecord
+end
