@@ -1,10 +1,10 @@
-<%= form_with(model: local_record, local: true) do |form| %>
-  <% if local_record.errors.any? %>
+<%= form_with(model: site, local: true) do |form| %>
+  <% if site.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(local_record.errors.count, "error") %> prohibited this local_record from being saved:</h2>
+      <h2><%= pluralize(site.errors.count, "error") %> prohibited this site from being saved:</h2>
 
       <ul>
-        <% local_record.errors.full_messages.each do |message| %>
+        <% site.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @local_records = LocalRecord.all
+    @sites = Site.all
   end
 end

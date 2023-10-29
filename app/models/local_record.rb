@@ -1,2 +1,0 @@
-class LocalRecord < ApplicationRecord
-end
