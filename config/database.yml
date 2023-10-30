@@ -1,0 +1,42 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  primary:
+    <<: *default
+    database: krakatoa_development
+  primary_replica:
+    <<: *default
+    replica: true
+    database: krakatoa_development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  primary:
+    <<: *default
+    database: krakatoa_test
+  primary_replica:
+    <<: *default
+    replica: true
+    database: krakatoa_test
+
+vault_test:
+  primary:
+    <<: *default
+    database: vault_test
+  primary_replica:
+    <<: *default
+    replica: true
+    database: vault_test
+
+staging:
+  <<: *default
+  database: krakatoa_staging
+
+production:
+  <<: *default
+  database: krakatoa_production
